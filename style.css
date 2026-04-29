@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainPage{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    background-color: grey;
+}
+
+aside{
+    flex-grow: 1;
+    background-color: yellow;
+}
+
+main{
+    flex-grow: ;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 1%;
+    background-color: grey;
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: grey;
+    background-color: black;
+}
+
+footer{
+    background-color: grey;
+}
