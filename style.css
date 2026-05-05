@@ -1,48 +1,93 @@
-body{
-    background-color: black;
-    flex-direction: column;
-    justify-content: space-between;
+:root{
+    --bg_color: #171a21;
+    --bg_color_darker: #111;
+    --content_color: #1b2838;
+    --text_color: #c7d5e0;
+    --highlight_color: #66c0f4;
+    --highlight_border:#2a475e;
 }
 
-.mainPage{
-    margin: 1%;
+body{
+    background-color: var(--content_color);
+    margin:0%;
+    color: var(--text_color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 table{
-    background-color: grey;
+    background-color: var(--bg_color);
+    padding: 5%;
+    border-collapse: collapse;
+    text-wrap: inherit;
+    width: 100%;
 }
 
-aside{
-    flex-grow: 1;
-    background-color: yellow;
+th, td{
+    padding: 1%;
+    margin: 1%;
 }
+
+td{
+    max-width: 0;
+    word-wrap:break-word
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: left;
+}
+
+tr :nth-child(4){
+    text-align: right;;
+} 
 
 main{
-    flex-grow: ;
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+section{
+    width: 50%;
+    margin: 1%;
+}
+
+header {
+    background-color: var(--bg_color_darker);
+    padding: 2%;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    background-color: var(--bg_color);
+    color: var(--text_color);
+}
 
-    padding: 1%;
-    background-color: grey;
-    color: black;
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li a{
+    display: block;
+    padding: 14px 16px;
 }
 
 nav a{
     text-decoration: none;
-    color: black;
+    color: var(--text_color);
 }
 
 nav a:hover{
-    color: grey;
-    background-color: black;
+    color: var(--highlight_color);
+    background-color: var(--highlight_border);
 }
 
 footer{
-    background-color: grey;
+    background-color: var(--bg_color_darker);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding:0.5%;
+    width: 100%;
 }
