@@ -31,25 +31,33 @@ function cambiarFotoCarrousel(element){
     document.getElementById("imagenCarrousel").src=element.src;
 }
 
-function checkForm(){
-    let userName = document.forms['userLoginForm']['userName'];
-    if(userName.trim() == ""){
-        window.alert("El campo de nombre de usuario no puede estar en blanco");
-        return false;
-    }
-    if(userName.length <= 3){
-        window.alert("El campo de nombre de usuario debe tener una longitud superior a 3 caracteres");
-        return false;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("userLoginForm");
 
-    let userEmail = document.forms['userLoginForm']['userMail'];
-    if(userMail.trim() == ""){
-        window.alert("El campo de correo del usuario no puede estar en blanco");
-        return false;
-    }
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        const userName = document.forms["userLoginForm"]["userName"].value;
+        const userEmail = document.forms["userLoginForm"]["userMail"].value;
 
-    return true;
-}
+        if (userName.trim() === "") {
+            window.alert("El nombre no puede estar vacío");
+            return;
+        }
+        if (userName.length <= 3) {
+            window.alert("El nombre debe tener más de 3 caracteres");
+            return;
+        }
 
+        if (userEmail.trim() === "") {
+            window.alert("El correo no puede estar vacío");
+            return;
+        }
+        if (!userEmail.includes("@")) {
+            window.alert("Correo no válido");
+            return;
+        }
 
-
+        window.alert("Formulario válido")
+    });
+});

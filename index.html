@@ -28,7 +28,7 @@
         </ul>
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
-        <form id="userLoginForm" onsubmit="return checkForm()" method="post">
+        <form id="userLoginForm" method="post" novalidate>
             <div class="campoForm">
                 <label for="userName">Usuario: </label>
                 <input type="text" id="userName" name="userName" placeholder="Escriba su usuario">
@@ -48,7 +48,10 @@
         <div id=carrousel>
             <div id="carrouselVisualizador">
                 <a onclick="imagenAnterior()">◀</a>
-                    <img id="imagenCarrousel"  alt="Portada del videojuego Seleccionado">
+                    <img id="imagenCarrousel" 
+                        src="./imagenes/carrousel/DiscoElysium.jpg" 
+                        alt="Portada del videojuego Seleccionado"
+                    >
                 <a onclick="imagenSiguiente()">▶</a>
             </div>
 
