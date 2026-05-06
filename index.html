@@ -4,7 +4,6 @@
 <!-- Metadatos y enlaces al css y al js -->
 <head>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vapor</title>
@@ -22,10 +21,10 @@
     <nav>
         <!-- Botones de navegacion -->
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Contact</a></li>    
+            <li><a href="">Inicio</a></li>
+            <li><a href="#">Información</a></li>
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Catálogo</a></li>    
         </ul>
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
@@ -48,28 +47,47 @@
         <!-- Carrousel con fotos en plan steam-->
         <div id=carrousel>
             <div id="carrouselVisualizador">
-                <a>◀</a>
-                <img src="./imagenes/carrousel/transistor.jpg" alt="Portada del videojuego Transistor">
-                <a>▶</a>
+                <a onclick="imagenAnterior()">◀</a>
+                    <img id="imagenCarrousel"  alt="Portada del videojuego Seleccionado">
+                <a onclick="imagenSiguiente()">▶</a>
             </div>
 
             <div id="preview">
-                <div class="previewCard">
-                    <img src="./imagenes/carrousel/DiscoElysium.jpg" alt="Portada del videojuego Disco Elysium">
+                <div>
+                    <img class="previewCard" 
+                        onclick="cambiarFotoCarrousel(this)" 
+                        src="./imagenes/carrousel/DiscoElysium.jpg" 
+                        alt="Portada del videojuego Disco Elysium"
+                    >
                 </div>
-                <div class="previewCard">
-                    <img src="./imagenes/carrousel/hollowKnight.jpg" alt="Portada del videojuego Hollow Knight">
+                <div>
+                    <img class="previewCard" 
+                        onclick="cambiarFotoCarrousel(this)"
+                        src="./imagenes/carrousel/hollowKnight.jpg" 
+                        alt="Portada del videojuego Hollow Knight"
+                    >
                 </div>
-                <div class="previewCard">
-                    <img src="./imagenes/carrousel/FinalFantasyXV.jpg" alt="Portada del videojuego Final Fantasy XV">
+                <div>
+                    <img class="previewCard" 
+                        onclick="cambiarFotoCarrousel(this)"
+                        src="./imagenes/carrousel/FinalFantasyXV.jpg" 
+                        alt="Portada del videojuego Final Fantasy XV"
+                    >
                 </div>
-                 <div class="previewCard">
-                    <img src="./imagenes/carrousel/outerWilds.jpg" alt="Portada del videojuego Outer Wilds">
+                 <div>
+                    <img class="previewCard" 
+                        onclick="cambiarFotoCarrousel(this)"
+                        src="./imagenes/carrousel/outerWilds.jpg" 
+                        alt="Portada del videojuego Outer Wilds"
+                    >
                 </div>
-                <div class="previewCard">
-                    <img src="./imagenes/carrousel/transistor.jpg" alt="Portada del videojuego Transistor">
+                <div>
+                    <img class="previewCard" 
+                        onclick="cambiarFotoCarrousel(this)"
+                        src="./imagenes/carrousel/transistor.jpg" 
+                        alt="Portada del videojuego Transistor"
+                    >
                 </div>
-                
             </div>
         </div>
 
@@ -81,67 +99,55 @@
                     <tr>
                         <th>Imagen</th>
                         <th>Título</th>
-                        <th>Descripcion</th>
+                        <th>Descripción</th>
                         <th>Precio</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvaniaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
-                        <td>Hollow Knight</td>
-                        <td> Metroidvania</td>
-                        <td>13.99€</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
-                        <td>Hollow Knight</td>
-                        <td> Metroidvania</td>
-                        <td>13.99€</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
                         <td>Hollow Knight</td>
                         <td> Metroidvania</td>
                         <td>13.99€</td>
@@ -161,4 +167,5 @@
         <p>footer</p>
     </footer>
 </body>
+<script src="./script.js"></script>
 </html>
