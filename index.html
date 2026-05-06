@@ -28,7 +28,7 @@
         </ul>
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
-        <form method="get">
+        <form id="userLoginForm" onsubmit="return checkForm()" method="post">
             <div class="campoForm">
                 <label for="userName">Usuario: </label>
                 <input type="text" id="userName" name="userName" placeholder="Escriba su usuario">

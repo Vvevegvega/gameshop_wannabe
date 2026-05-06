@@ -31,5 +31,25 @@ function cambiarFotoCarrousel(element){
     document.getElementById("imagenCarrousel").src=element.src;
 }
 
+function checkForm(){
+    let userName = document.forms['userLoginForm']['userName'];
+    if(userName.trim() == ""){
+        window.alert("El campo de nombre de usuario no puede estar en blanco");
+        return false;
+    }
+    if(userName.length <= 3){
+        window.alert("El campo de nombre de usuario debe tener una longitud superior a 3 caracteres");
+        return false;
+    }
+
+    let userEmail = document.forms['userLoginForm']['userMail'];
+    if(userMail.trim() == ""){
+        window.alert("El campo de correo del usuario no puede estar en blanco");
+        return false;
+    }
+
+    return true;
+}
+
 
 
