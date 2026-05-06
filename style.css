@@ -297,18 +297,35 @@
         #navMenuClose{
             align-self: flex-start;
         }
-
+        #carrouselVisualizador img{
+            width: 80%;
+        }
+        #preview div {
+            width: 15%;
+        }
     }
 
     @media only screen and (min-width: 600px) {
         section{
             width: var(--screen-medium-content-margin);
         }
+        #carrouselVisualizador img{
+            width: 70%;
+        }
+        #preview div {
+            width: 15%;
+        }
     }
 
     @media only screen and (min-width: 1000px) {
         section{
             width: var(--screen-big-content-margin);
+        }
+        #carrouselVisualizador img{
+            width: 60%;
+        }
+        #preview div {
+            width: 10%;
         }
     }
 /* END Media query for the nav*/
