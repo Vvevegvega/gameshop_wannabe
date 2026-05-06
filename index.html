@@ -19,13 +19,19 @@
     </header>
     <!-- Menú de navegacion -->
     <nav>
-        <!-- Botones de navegacion -->
-        <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="#">Información</a></li>
-            <li><a href="#">Biblioteca</a></li>
-            <li><a href="#">Catálogo</a></li>    
-        </ul>
+        <!-- Boton de menu chulo -->
+         <div id="menuActions">
+            <button id="navMenuOpen">☰</button>
+            <button id="navMenuClose" hidden>✕</button>
+
+            <!-- Botones de navegacion -->
+            <ul>
+                <li class="navButton" hidden><a href="" >Inicio</a></li>
+                <li class="navButton" hidden><a href="#" >Información</a></li>
+                <li class="navButton" hidden><a href="#" >Biblioteca</a></li>
+                <li class="navButton" hidden><a href="#" >Catálogo</a></li>    
+            </ul>
+         </div>
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
         <form id="userLoginForm" method="post" novalidate>
@@ -50,7 +56,7 @@
             <div id="carrouselVisualizador">
                 <a onclick="imagenAnterior()">◀</a>
                     <img id="imagenCarrousel" 
-                        src="./imagenes/carrousel/DiscoElysium.jpg" 
+                        src="./imagenes/carrousel/transistor.jpg" 
                         alt="Portada del videojuego Seleccionado"
                     >
                 <a onclick="imagenSiguiente()">▶</a>
@@ -60,9 +66,9 @@
             <div id="preview">
                 <div>
                     <img class="previewCard" 
-                        onclick="cambiarFotoCarrousel(this)" 
-                        src="./imagenes/carrousel/DiscoElysium.jpg" 
-                        alt="Portada del videojuego Disco Elysium"
+                        onclick="cambiarFotoCarrousel(this)"
+                        src="./imagenes/carrousel/transistor.jpg" 
+                        alt="Portada del videojuego Transistor"
                     >
                 </div>
                 <div>
@@ -88,9 +94,9 @@
                 </div>
                 <div>
                     <img class="previewCard" 
-                        onclick="cambiarFotoCarrousel(this)"
-                        src="./imagenes/carrousel/transistor.jpg" 
-                        alt="Portada del videojuego Transistor"
+                        onclick="cambiarFotoCarrousel(this)" 
+                        src="./imagenes/carrousel/DiscoElysium.jpg" 
+                        alt="Portada del videojuego Disco Elysium"
                     >
                 </div>
             </div>

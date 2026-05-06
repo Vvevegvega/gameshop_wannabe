@@ -5,6 +5,7 @@
 
     --content_color: #1b2838;
     --text_color: #c7d5e0;
+    --text_color_secondary: grey;
     --highlight_color: #66c0f4;
     --highlight_border:#2a475e;
 
@@ -43,7 +44,7 @@
         nav {
             z-index: 9999;
             display:flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
             justify-content: space-between;
             align-items: center;
             position:sticky;
@@ -51,6 +52,43 @@
             background-color: var(--bg_color_darker);
             color: var(--text_color);
         }
+
+        .submitButton,
+        nav button{
+            color: var(--text_color);
+            border:none;
+            background-color: var(--bg_color_darker);
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+        .submitButton:hover,
+        nav button:hover{
+            color: var(--highlight_color);
+            background-color: var(--highlight_border);
+            cursor: pointer;
+        }
+
+        .submitButton:active,
+        nav button:active{
+            color: var(--highlight_border);
+            background-color: var(--highlight_color);
+        }
+
+        /*START Boton de desplegar menu*/
+            #menuActions{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                color:var(--text_color);
+            }
+
+            #navMenuOpen{
+                padding: 14px 26.5px;
+            }
+            #navMenuClose{
+                padding: 14px 30px;
+            }
+        /*END Boton de desplegar menu*/
 
         /* START Menu dentro del nav*/
             nav ul{
@@ -103,22 +141,7 @@
             }
 
             .submitButton{
-                color: var(--text_color);
-                border:none;
-                background-color: var(--bg_color_darker);
-                text-decoration: none;
-                padding: 14px 16px;
-            }
-
-            .submitButton:hover{
-                color: var(--highlight_color);
-                background-color: var(--highlight_border);
-                cursor: pointer;
-            }
-
-            .submitButton:active{
-                color: var(--highlight_border);
-                background-color: var(--highlight_color);
+                margin-left: 3px;
             }
 
         /* END Form dentro del nav */
@@ -246,6 +269,7 @@
             display:flex;
             justify-content: space-between;
             background-color: var(--bg_color_darker);
+            color: var(--text_color_secondary);
             position: sticky;
             left: 0;
             bottom: 0;
@@ -266,6 +290,14 @@
         section{
             width: var(--screen-small-content-margin);
         }
+        nav ul{
+            flex-direction: column;
+        }
+        #navMenuOpen,
+        #navMenuClose{
+            align-self: flex-start;
+        }
+
     }
 
     @media only screen and (min-width: 600px) {

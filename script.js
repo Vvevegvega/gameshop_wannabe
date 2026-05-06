@@ -33,6 +33,30 @@
     }
 //FIN carrousel imagenes
 
+//INICIO Menu
+    const abrirMenu = document.getElementById("navMenuOpen");
+    const cerrarMenu = document.getElementById("navMenuClose");
+    const botones = document.getElementsByClassName("navButton");
+
+    abrirMenu.addEventListener("click", function () {
+        cerrarMenu.hidden=false;
+        abrirMenu.hidden=true;
+
+        for(let boton of botones){
+            boton.hidden= false;
+        }
+    });
+
+    cerrarMenu.addEventListener("click", function () {
+        cerrarMenu.hidden=true;
+        abrirMenu.hidden=false;
+
+        for(let boton of botones){
+            boton.hidden=true;
+        }
+    });
+//FIN MEnu
+
 //INICIO validacion del formulario
     document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("userLoginForm");
