@@ -243,12 +243,18 @@
 
     /* START FOOTER */
         footer{
+            display:flex;
+            justify-content: space-between;
             background-color: var(--bg_color_darker);
             position: sticky;
             left: 0;
             bottom: 0;
             padding:0.1%;
+        }
 
+        footer p{
+            margin-left: 3%;
+            margin-right: 3%;
         }
     /* END FOOTER */
 
