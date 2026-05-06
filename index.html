@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vapor</title>
-    <link rel="icon" type="image/x-icon" href="/imagenes/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./imagenes/favicon/favicon.ico">
 </head>
 
 <!-- Contendio -->
 <body>
     <!-- Encabezado de la página -->
     <header>
+        <img src="./imagenes/favicon/favicon.ico" alt="Icono de la pagina Steam">
         <h1>Vapor</h1>
     </header>
     <!-- Menú de navegacion -->
@@ -28,17 +29,49 @@
         </ul>
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
-        <div>
+        <form method="get">
+            <div class="campoForm">
+                <label for="userName">Usuario: </label>
+                <input type="text" id="userName" name="userName" placeholder="Escriba su usuario">
+            </div>
 
-        </div>
+            <div class="campoForm">
+                <label for="userMail">Correo: </label>
+                <input type="email" id="userMail" name="userMail" placeholder="ejemplo@correo.com">
+            </div>
+            <input class="submitButton" type="submit" value="Enviar">
+        </form>
     </nav>
 
     <!-- Contenido principal de la página-->
     <main>
         <!-- Carrousel con fotos en plan steam-->
-        <section>
-            <img src="img_girl.jpg" alt="Game cover">
-        </section>
+        <div id=carrousel>
+            <div id="carrouselVisualizador">
+                <a>◀</a>
+                <img src="./imagenes/carrousel/transistor.jpg" alt="Portada del videojuego Transistor">
+                <a>▶</a>
+            </div>
+
+            <div id="preview">
+                <div class="previewCard">
+                    <img src="./imagenes/carrousel/DiscoElysium.jpg" alt="Portada del videojuego Disco Elysium">
+                </div>
+                <div class="previewCard">
+                    <img src="./imagenes/carrousel/hollowKnight.jpg" alt="Portada del videojuego Hollow Knight">
+                </div>
+                <div class="previewCard">
+                    <img src="./imagenes/carrousel/FinalFantasyXV.jpg" alt="Portada del videojuego Final Fantasy XV">
+                </div>
+                 <div class="previewCard">
+                    <img src="./imagenes/carrousel/outerWilds.jpg" alt="Portada del videojuego Outer Wilds">
+                </div>
+                <div class="previewCard">
+                    <img src="./imagenes/carrousel/transistor.jpg" alt="Portada del videojuego Transistor">
+                </div>
+                
+            </div>
+        </div>
 
         <!-- Listado con juegos en plan menu de novedades -->
         <section>
@@ -71,43 +104,55 @@
                         <td> Metroidvania</td>
                         <td>13.99€</td>
                     </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img_girl.jpg" alt="Game cover"></td>
+                        <td>Hollow Knight</td>
+                        <td> Metroidvania</td>
+                        <td>13.99€</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Quiero tener una calculadora que haga una especie de carrito y que aqui abajo muestre el precio total de todos los juegos comprados -->
+        <!--Calculadora-->
         <section>
-            <h2>porcion de tema calculadora (Quiero)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Título</th>
-                        <th>Descripcion</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
-                        <td>Hollow Knight</td>
-                        <td> Metroidvaniaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>13.99€</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
-                        <td>Hollow Knight</td>
-                        <td> Metroidvania</td>
-                        <td>13.99€</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img_girl.jpg" alt="Game cover"></td>
-                        <td>Hollow Knight</td>
-                        <td> Metroidvania</td>
-                        <td>13.99€</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Caclculadora</h2>
         </section>
     </main>
 
