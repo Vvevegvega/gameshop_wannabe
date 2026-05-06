@@ -57,6 +57,23 @@
     });
 //FIN MEnu
 
+//INICIO Calculadora
+    document.querySelectorAll('.panelUnidades').forEach(panel => {
+        const counter = panel.querySelector('p');
+
+        panel.querySelector('.addUnit').addEventListener('click', () => {
+            counter.textContent = parseInt(counter.textContent) + 1;
+        });
+
+        panel.querySelector('.subUnit').addEventListener('click', () => {
+            let current = parseInt(counter.textContent);
+            if (current > 0) {
+                counter.textContent = current - 1;
+            }
+        });
+    });
+//FIN Calculadora
+
 //INICIO validacion del formulario
     document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("userLoginForm");

@@ -54,7 +54,7 @@
         }
 
         .submitButton,
-        nav button{
+        button{
             color: var(--text_color);
             border:none;
             background-color: var(--bg_color_darker);
@@ -62,14 +62,14 @@
             padding: 14px 16px;
         }
         .submitButton:hover,
-        nav button:hover{
+        button:hover{
             color: var(--highlight_color);
             background-color: var(--highlight_border);
             cursor: pointer;
         }
 
         .submitButton:active,
-        nav button:active{
+        button:active{
             color: var(--highlight_border);
             background-color: var(--highlight_color);
         }
@@ -225,8 +225,6 @@
                 width: 80%;
                 opacity: 0.6;
             }
-
-
         /*END CARROUSE*/
 
         section{
@@ -257,11 +255,28 @@
 
         tr :nth-child(2),
         tr :nth-child(3) {
-        text-align: left;
+            text-align: left;
         }
         tr :nth-child(4){
-            text-align: right;;
+            text-align: right;
         }
+
+        .panelUnidades{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .panelUnidades p{
+            margin: 3%;
+        }
+
+        #precioTotalCarrito{
+            background-color: red;
+            display:flex;
+            text-align: right;
+        }
+
     /* END MAIN */
 
     /* START FOOTER */
