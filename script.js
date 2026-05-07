@@ -67,7 +67,7 @@
         const precioUnidad = parseFloat(panel.closest('.videojuego').dataset.precio);
 
         function actualizarTotal(){
-            precioCarrito.textContent = parseFloat(precioSinIva) * parseFloat(IVA_multiplo;
+            precioCarrito.textContent = parseFloat(precioSinIva) * parseFloat(IVA_multiplo);
         }
 
         panel.querySelector('.addUnit').addEventListener('click', () => {
