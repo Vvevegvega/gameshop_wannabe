@@ -18,11 +18,11 @@
         <h1>Vapor</h1>
     </header>
     <!-- Menú de navegacion -->
-    <nav>
+    <nav id="topNav">
         <!-- Boton de menu chulo -->
          <div id="menuActions">
-            <button id="navMenuOpen">☰</button>
-            <button id="navMenuClose" hidden>✕</button>
+            <button id="navMenuOpen" class="navMenuButton">☰</button>
+            <button id="navMenuClose" class="navMenuButton" hidden>✕</button>
 
             <!-- Botones de navegacion -->
             <ul>
@@ -35,14 +35,16 @@
 
         <!-- Registro dentro del nav (En plan viejuno) no se si hace falta meter un div o puedo meter directamente un form -->
         <form id="userLoginForm" method="post" novalidate>
-            <div class="campoForm">
-                <label for="userName">Usuario: </label>
-                <input type="text" id="userName" name="userName" placeholder="Escriba su usuario">
-            </div>
+            <div id="campos">
+                <div class="campoForm">
+                    <label for="userName">Usuario: </label>
+                    <input type="text" id="userName" name="userName" placeholder="Escriba su usuario">
+                </div>
 
-            <div class="campoForm">
-                <label for="userMail">Correo: </label>
-                <input type="email" id="userMail" name="userMail" placeholder="ejemplo@correo.com">
+                <div class="campoForm">
+                    <label for="userMail">Correo: </label>
+                    <input type="email" id="userMail" name="userMail" placeholder="ejemplo@correo.com">
+                </div>
             </div>
             <input class="submitButton" type="submit" value="Enviar">
         </form>
@@ -55,10 +57,10 @@
             <!-- Imagen del carrousel que se esta viendo -->
             <div id="carrouselVisualizador">
                 <a onclick="imagenAnterior()">◀</a>
-                    <img id="imagenCarrousel" 
-                        src="./imagenes/carrousel/transistor.jpg" 
-                        alt="Portada del videojuego Seleccionado"
-                    >
+                <img id="imagenCarrousel" 
+                    src="./imagenes/carrousel/transistor.jpg" 
+                    alt="Portada del videojuego Seleccionado"
+                >
                 <a onclick="imagenSiguiente()">▶</a>
             </div>
             
@@ -110,7 +112,6 @@
                     <tr>
                         <th>Imagen</th>
                         <th>Título</th>
-                        <th>Descripción</th>
                         <th>Precio</th>
                         <th>Unidades</th>
                     </tr>
@@ -118,10 +119,11 @@
                 <tbody>
                     <tr class="videojuego" data-precio="22.99">
                         <td><div><img src="./imagenes/carrousel/outerWilds.jpg" alt="Game cover"></div></td>
-                        <td>Outer Wilds</td>
-                        <td>Outer Wilds, nombrado juego del año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian, es un galardonado título de mundo abierto, que se desarrolla en un enigmático sistema solar confinado a un bucle temporal infinito.</td>
+                        <td id="entradaTitulo">
+                            <p>Outer Wilds</p>
+                            <p>Outer Wilds, nombrado juego del año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian, es un galardonado título de mundo abierto, que se desarrolla en un enigmático sistema solar confinado a un bucle temporal infinito.</p>
+                        </td>
                         <td>22.99€</td>
-                        <!-- Like a spinner with the units-->
                         <td>
                             <div class="panelUnidades">
                                 <button class="subUnit">-</button>
@@ -131,9 +133,11 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="14.79">
-                        <td><div><img src="./imagenes/carrousel/hollowKnight.jpg" alt="Game cover"></div></td>
-                        <td>Hollow Knight</td>
-                        <td>¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de insectos y héroes que se encuentra en ruinas. Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano.</td>
+                        <td><div class="caratula"><img src="./imagenes/carrousel/hollowKnight.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Hollow Knight</p>
+                            <p>Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano.</p>
+                        </td>
                         <td>14.79€</td>
                         <td>
                             <div class="panelUnidades">
@@ -144,9 +148,11 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="19.50">
-                        <td><div><img src="./imagenes/carrousel/transistor.jpg" alt="Game cover"></div></td>
-                        <td>Transistor</td>
-                        <td>Transistor, de los creadores de Bastion, es un juego de rol con temática de ciencia ficción que te invita a blandir un arma extraordinaria de origen desconocido para luchar a lo largo y ancho de una espectacular ciudad futurista.</td>
+                        <td><div class="caratula"><img src="./imagenes/carrousel/transistor.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Transistor</p>
+                            <p>Transistor, de los creadores de Bastion, es un juego de rol con temática de ciencia ficción que te invita a blandir un arma extraordinaria de origen desconocido para luchar a lo largo y ancho de una espectacular ciudad futurista.</p>
+                        </td>
                         <td>19.50€</td>
                         <td>
                             <div class="panelUnidades">
@@ -157,9 +163,12 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="34.99">
-                        <td><div><img src="./imagenes/carrousel/FinalFantasyXV.jpg" alt="Game cover"></div></td>
-                        <td>Final Fantasy XV</td>
-                        <td>En compañía de tus mejores amigos, embárcate en el viaje de tu vida por un mundo extraordinario con paisajes impresionantes y bestias de proporciones épicas para recuperar tu patria de las garras de un enemigo inimaginable.</td>
+                        <td><div class="caratula"><img src="./imagenes/carrousel/FinalFantasyXV.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Final Fantasy XV</p>
+                            <p>En compañía de tus mejores amigos, embárcate en el viaje de tu vida por un mundo extraordinario con paisajes impresionantes y bestias de proporciones épicas para recuperar tu patria de las garras de un enemigo inimaginable.</p>
+                        </td>
+
                         <td>34.99€</td>
                         <td>
                             <div class="panelUnidades">
@@ -170,9 +179,11 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="24.50">
-                        <td><div><img src="./imagenes/juegos/hades.jpg" alt="Game cover"></div></td>
-                        <td>Hades</td>
-                        <td>Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.</td>
+                        <td><div class="caratula"><img src="./imagenes/juegos/hades.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Hades</p>
+                            <p>Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.</p>
+                        </td>
                         <td>24.50€</td>
                         <td>
                             <div class="panelUnidades">
@@ -183,9 +194,11 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="37.99">
-                        <td><div><img src="./imagenes/carrousel/DiscoElysium.jpg" alt="Game cover"></div></td>
-                        <td>Disco Elysium</td>
-                        <td>Disco Elysium es un revolucionario juego de rol de mundo abierto. Encarna a un detective con un conjunto único de habilidades a su disposición y un barrio entero que recorrer. Interroga personajes memorables, desentraña casos o acepta sobornos. Sé un héroe o un ser humano desastroso.</td>
+                        <td><div class="caratula"><img src="./imagenes/carrousel/DiscoElysium.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Disco Elysium</p>
+                            <p>Disco Elysium es un revolucionario juego de rol de mundo abierto. Encarna a un detective con un conjunto único de habilidades a su disposición y un barrio entero que recorrer. Interroga personajes memorables, desentraña casos o acepta sobornos. Sé un héroe o un ser humano desastroso.</p>
+                        </td>
                         <td>37.99€</td>
                         <td>
                             <div class="panelUnidades">
@@ -196,9 +209,10 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="19.99">
-                        <td><div><img src="./imagenes/juegos/skate_story.jpg" alt="Game cover"></div></td>
-                        <td>Skate Story</td>
-                        <td>You are a demon, made of glass and pain, and yet, you must stake.
+                        <td><div class="caratula"><img src="./imagenes/juegos/skate_story.jpg" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Skate Story</p>
+                            <p>You are a demon, made of glass and pain, and yet, you must stake.</p>
                         </td>
                         <td>19.99€</td>
                         <td>
@@ -210,10 +224,12 @@
                         </td>
                     </tr>
                     <tr class="videojuego" data-precio="59.99">
-                        <td><div><img src="./imagenes/juegos/p5.png" alt="Game cover"></div></td>
-                        <td>Persona 5 Royal</td>
-                        <td>Tras verse obligado a cambiarse a otro instituto en Tokio, el protagonista tiene un extraño sueño. "Eres, sin lugar a dudas, prisionero del destino. La perdición te aguarda en el futuro". Con el objetivo de su "rehabilitación" en mente, deberá ponerse la máscara del Ladrón Fantasma para salvar el mundo de sus distorsionados deseos.</td>
-                        <td>59.99€</p></td>
+                        <td><div class="caratula"><img src="./imagenes/juegos/p5.png" alt="Game cover"></div></td>
+                        <td id="entradaTitulo">
+                            <p>Persona 5 Royal</p>
+                            <p>Eres, sin lugar a dudas, prisionero del destino. La perdición te aguarda en el futuro. Con el objetivo de "rehabilitación" en mente, deberás ponerte la máscara de Ladrón Fantasma para salvar el mundo de sus distorsionados deseos.</p>
+                        </td>
+                        <td>59.99€</td>
                         <td>
                             <div class="panelUnidades">
                                 <button class="subUnit">-</button>
@@ -236,8 +252,8 @@
 
     <!-- Nav inferior -->
     <nav id="lowerNav">
-        <div><p>Añadir producto</p></div>
-        <div><p>Gestionar descargas</p></div>
+        <div id="addProducto"><p>Añadir producto</p></div>
+        <div id="gestionarDescarga"><p>Gestionar descargas</p></div>
         <div id="carrito">
             <label>Total con IVA:</label>   
             <p id="precioTotalCarrito_Euros">0.0€</p>

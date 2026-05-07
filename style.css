@@ -15,9 +15,7 @@
     --border_margin: 3%;
     --items-gap: 1rem;
 
-    --screen-big-content-margin: 70%;
-    --screen-medium-content-margin: 80%;
-    --screen-small-content-margin: 90%;
+
 }
 
 /* START BODY*/
@@ -136,7 +134,8 @@
             label{
                 padding: 14px 16px;
             }
-
+            
+            #campos,
             .campoForm{
                 display:flex;
                 align-items: center;
@@ -235,19 +234,32 @@
         }
 
         table{  
-            padding: 8%;
             border-collapse: collapse;
             text-wrap: inherit;
             width: 100%;
         }
 
+        td:nth-child(1){
+            padding:0;
+        }
+        .caratula{
+            display: flex;
+            align-items: center;
+            justify-items: flex;
+        }
         table div img{
             width: 100%;
+            align-self: center;
+
         }
 
         th, td{
             padding: 2%;
             margin: 2%;
+        }
+
+        #entradaTitulo p:nth-child(2){
+            font-size: small;
         }
 
         td{
@@ -264,13 +276,39 @@
         thead, tfoot{
             background-color: var(--bg_color_darker);
         }
+        
+       /* Column 1 */
+        table th:nth-child(1),
+        table td:nth-child(1) {
+            width: 18%;
+        }
 
-        tr :nth-child(2),
-        tr :nth-child(3) {
+        /* Column 2 */
+        table th:nth-child(2),
+        table td:nth-child(2) {
+            width: 42%;
             text-align: left;
         }
-        tr :nth-child(4){
-            text-align: right;
+
+        /* Column 3 */
+        table th:nth-child(3),
+        table td:nth-child(3) {
+            width: 13%;
+            text-align: left;
+        }
+
+        /* Column 4 */
+        table th:nth-child(4),
+        table td:nth-child(4) {
+            width: 10%;
+            text-align: center;
+        }
+
+        /* Column 5 */
+        table th:nth-child(5),
+        table td:nth-child(5) {
+            width: 16%;
+            text-align: center;
         }
 
         .panelUnidades{
@@ -280,7 +318,7 @@
         }
 
         .panelUnidades p{
-            margin: 5%;
+            margin: 10%;
         }
     /* END MAIN */
 
@@ -318,8 +356,22 @@
         margin-right: 3%;
     }
 
+    #addProducto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex: 1;
+    }
+    #gestionarDescarga{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex: 4;
+    }
+
     #carrito{
         display:flex;
+        flex:1;
         align-items:center;
         justify-content: center;
 
@@ -340,13 +392,93 @@
 
 
 /* START Media query*/
-    @media only screen and (max-width: 600px) {
+
+    @media (max-width: 600px){
+        #campos{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
         section{
-            width: var(--screen-small-content-margin);
+            width: 95%;
+        }
+        .panelUnidades{
+            flex-direction: column-reverse;
+        }
+        #carrouselVisualizador a{
+            padding: 0.5%;
+        }
+        #carrouselVisualizador img{
+            width: 80%;
+        }
+        #preview div {
+            width: 18%;
+        }
+        #topNav{
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+        #userLoginForm{
+            flex-direction: row;
+            align-items: center;
+            justify-items: space-between;
+            margin-left: 0;
+        }
+        #menuActions{
+            flex-direction: row;
+        }
+        .navMenuButton{
+            align-self: flex-start;
         }
         nav ul{
             flex-direction: column;
         }
+
+        /* Column 1 */
+        table th:nth-child(1),
+        table td:nth-child(1) {
+            width: 22%;
+        }
+
+        /* Column 2 */
+        table th:nth-child(2),
+        table td:nth-child(2) {
+            width: 36%;
+            text-align: left;
+        }
+
+        /* Column 3 */
+        table th:nth-child(3),
+        table td:nth-child(3) {
+            width: 15%;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 600px){
+        section{
+            width: 95%;
+        }
+        nav ul{
+            flex-direction: column;
+        }
+
+        .panelUnidades{
+            flex-direction: column-reverse;
+        }
+
+        /* Column 1 */
+        table th:nth-child(1),
+        table td:nth-child(1) {
+            width: 20%;
+        }
+
+        /* Column 2 */
+        table th:nth-child(2),
+        table td:nth-child(2) {
+            width: 40%;
+            text-align: left;
+        }
+
         #navMenuOpen,
         #navMenuClose{
             align-self: flex-start;
@@ -357,23 +489,42 @@
         #preview div {
             width: 15%;
         }
+        #topNav{
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+        #userLoginForm{
+            margin-left: 0;
+        }
+        #menuActions{
+            flex-direction: row;
+        }
+        .navMenuButton{
+            align-self: flex-start;
+        }
+        nav ul{
+            flex-direction: column;
+        }
+        
+
     }
 
-    @media only screen and (min-width: 600px) {
-        section{
-            width: var(--screen-medium-content-margin);
+    @media only screen and (min-width: 1130px) {
+        #topNav{
+            flex-direction: row;
+            justify-content: space-between;
         }
-        #carrouselVisualizador img{
+        #menuActions{
+            flex-direction: row;
+        }
+        nav ul{
+            flex-direction: row;
+        }
+        section{
             width: 70%;
         }
-        #preview div {
-            width: 15%;
-        }
-    }
-
-    @media only screen and (min-width: 1000px) {
-        section{
-            width: var(--screen-big-content-margin);
+        .panelUnidades{
+            flex-direction: row;
         }
         #carrouselVisualizador img{
             width: 60%;
