@@ -1,7 +1,14 @@
 //INICIO Carrousel de imagenes
     const carrouselImagenList = document.querySelectorAll(".previewCard");
+    setPositions();
     let carrouselPuntero = -1;
     imagenSiguiente();
+
+    function setPositions(){
+        carrouselImagenList.forEach((card, index) => {
+            card.dataset.position = index;
+        });
+    }
 
     function imagenSiguiente(){
         carrouselPuntero ++;
@@ -21,6 +28,7 @@
 
     function cambiarFotoCarrousel(element){
         const selected = document.getElementsByClassName("previewCardSelected");
+
         for (let el of selected) {
             el.classList.remove("previewCardSelected");
             el.classList.add("previewCard")
@@ -28,6 +36,8 @@
 
         element.classList.remove("previewCard");
         element.classList.add("previewCardSelected");
+
+        carrouselPuntero = parseInt(element.dataset.position);
 
         document.getElementById("imagenCarrousel").src=element.src;
     }

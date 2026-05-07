@@ -273,8 +273,7 @@
 
         #precioTotalCarrito{
             display:flex;
-            justify-items: right;
-            align-items: end;
+            justify-content: flex-end;
             background-color: red;
             
         }
