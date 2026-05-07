@@ -3,6 +3,9 @@
     --bg_color_darker: #111;
     --bg_color_lighter: #232730;
 
+    --bg_table_even: #394f61;
+    --bg_table_odd: #263949;
+
     --content_color: #1b2838;
     --text_color: #c7d5e0;
     --text_color_secondary: grey;
@@ -232,7 +235,6 @@
         }
 
         table{  
-            background-color: var(--bg_color_darker);
             padding: 8%;
             border-collapse: collapse;
             text-wrap: inherit;
@@ -253,6 +255,16 @@
             word-wrap:break-word;
         }
 
+        tbody tr:nth-child(odd){
+            background-color: var(--bg_table_even);
+        }
+        tbody tr:nth-child(even){
+            background-color: var(--bg_table_odd);
+        }
+        thead, tfoot{
+            background-color: var(--bg_color_darker);
+        }
+
         tr :nth-child(2),
         tr :nth-child(3) {
             text-align: left;
@@ -268,35 +280,61 @@
         }
 
         .panelUnidades p{
-            margin: 3%;
+            margin: 5%;
         }
-
-        #precioTotalCarrito{
-            display:flex;
-            justify-content: flex-end;
-            background-color: red;
-            
-        }
-
     /* END MAIN */
 
     /* START FOOTER */
         footer{
             display:flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             background-color: var(--bg_color_darker);
-            color: var(--text_color_secondary);
-            position: sticky;
+            color: var(--text_color);
             left: 0;
             bottom: 0;
-            padding:0.1%;
-        }
-
-        footer p{
-            margin-left: 3%;
-            margin-right: 3%;
+            padding: 4%;
+            margin-top: 2%;
         }
     /* END FOOTER */
+
+    /* START LOWER NAV*/
+    #lowerNav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--bg_color_darker);
+        color: var(--text_color_secondary);
+
+        position: sticky;
+        left: 0;
+        bottom: 0;
+
+        padding: 0.1%;
+    }
+
+    #lowerNav div{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    #carrito{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+
+        background-color:var(--highlight_border);
+        color: var(--text_color);
+
+        white-space: nowrap;
+    }
+
+    #carrito p,
+    #carrito label{
+        margin:0;
+        padding: 14px 16px;
+    }
+    /* END LOWER NAV*/
 
 /* END BODY*/
 

@@ -74,10 +74,14 @@
 
     document.querySelectorAll('.panelUnidades').forEach(panel => {
         const counter = panel.querySelector('p');
-        const precioUnidad = parseFloat(panel.closest('.videojuego').dataset.precio);
+        const precioUnidad = parseFloat(panel.closest(".videojuego").dataset.precio);
 
         function actualizarTotal(){
-            precioCarrito.textContent = parseFloat(precioSinIva) * parseFloat(IVA_multiplo);
+            precioCarrito.textContent = 
+            (parseFloat(precioSinIva) * parseFloat(IVA_multiplo)) < 0 
+                ? "0.0"
+                : (parseFloat(precioSinIva) * parseFloat(IVA_multiplo)).toFixed(2);
+            precioCarrito.textContent += "€";
         }
 
         panel.querySelector('.addUnit').addEventListener('click', () => {
