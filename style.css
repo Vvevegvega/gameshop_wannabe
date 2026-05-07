@@ -272,9 +272,11 @@
         }
 
         #precioTotalCarrito{
-            background-color: red;
             display:flex;
-            text-align: right;
+            justify-items: right;
+            align-items: end;
+            background-color: red;
+            
         }
 
     /* END MAIN */

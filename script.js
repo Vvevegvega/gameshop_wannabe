@@ -58,17 +58,30 @@
 //FIN MEnu
 
 //INICIO Calculadora
+    let precioSinIva = 0;
+    const IVA_multiplo = 1.21;
+    const precioCarrito = document.getElementById("precioTotalCarrito_Euros");
+
     document.querySelectorAll('.panelUnidades').forEach(panel => {
         const counter = panel.querySelector('p');
+        const precioUnidad = parseFloat(panel.closest('.videojuego').dataset.precio);
+
+        function actualizarTotal(){
+            precioCarrito.textContent = parseFloat(precioSinIva) * parseFloat(IVA_multiplo;
+        }
 
         panel.querySelector('.addUnit').addEventListener('click', () => {
             counter.textContent = parseInt(counter.textContent) + 1;
+            precioSinIva += precioUnidad;
+            actualizarTotal();
         });
 
         panel.querySelector('.subUnit').addEventListener('click', () => {
             let current = parseInt(counter.textContent);
             if (current > 0) {
-                counter.textContent = current - 1;
+                counter.textContent --;
+                precioSinIva -= precioUnidad;
+                actualizarTotal();
             }
         });
     });
