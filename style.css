@@ -175,17 +175,14 @@
                 width: 60%;
             }
             #carrouselVisualizador a{
-                size: 100%;
                 color:var(--text_color);
                 padding: 2%;
             }
             #carrouselVisualizador a:hover{
-                size: 100%;
                 background-color: var(--highlight_border);
                 cursor: pointer;
             }
             #carrouselVisualizador a:active{
-                size: 100%;
                 background-color: var(--highlight_color);
             }
 
@@ -245,7 +242,6 @@
         .caratula{
             display: flex;
             align-items: center;
-            justify-items: flex;
         }
         table div img{
             width: 100%;
@@ -413,7 +409,6 @@
         #userLoginForm{
             flex-direction: row;
             align-items: center;
-            justify-items: space-between;
             margin-left: 0;
         }
         #menuActions{
