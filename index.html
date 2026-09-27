@@ -72,20 +72,34 @@
       <div id="carrousel">
         <!-- Imagen del carrousel que se esta viendo -->
         <div id="carrouselVisualizador">
-          <a onclick="imagenAnterior()">◀</a>
+          <a  
+            tabindex="0" 
+            onclick="imagenAnterior()"
+            onkeydown="if (event.key === 'Enter' || event.key === ' ') imagenAnterior()"
+          >
+            ◀
+          </a>
           <img
             id="imagenCarrousel"
             src="./imagenes/carrousel/transistor.jpg"
             alt="Portada del videojuego Seleccionado"
           />
-          <a onclick="imagenSiguiente()">▶</a>
+          <a 
+            tabindex="0" 
+            onclick="imagenSiguiente()"
+             onkeydown="if (event.key === 'Enter' || event.key === ' ') imagenSiguiente()"
+          >
+            ▶
+          </a>
         </div>
 
         <!-- Preview con imagenes pequeñitas para hacer click y ver en grande-->
         <div id="preview">
           <div>
             <img
+              tabindex="0"
               class="previewCard"
+              onkeydown="if (event.key === 'Enter' || event.key === ' ') cambiarFotoCarrousel(this)"
               onclick="cambiarFotoCarrousel(this)"
               src="./imagenes/carrousel/transistor.jpg"
               alt="Portada del videojuego Transistor"
@@ -93,7 +107,9 @@
           </div>
           <div>
             <img
+              tabindex="0"
               class="previewCard"
+              onkeydown="if (event.key === 'Enter' || event.key === ' ') cambiarFotoCarrousel(this)"
               onclick="cambiarFotoCarrousel(this)"
               src="./imagenes/carrousel/hollowKnight.jpg"
               alt="Portada del videojuego Hollow Knight"
@@ -101,7 +117,9 @@
           </div>
           <div>
             <img
+              tabindex="0"
               class="previewCard"
+              onkeydown="if (event.key === 'Enter' || event.key === ' ') cambiarFotoCarrousel(this)"
               onclick="cambiarFotoCarrousel(this)"
               src="./imagenes/carrousel/FinalFantasyXV.jpg"
               alt="Portada del videojuego Final Fantasy XV"
@@ -109,7 +127,9 @@
           </div>
           <div>
             <img
+              tabindex="0"
               class="previewCard"
+              onkeydown="if (event.key === 'Enter' || event.key === ' ') cambiarFotoCarrousel(this)"
               onclick="cambiarFotoCarrousel(this)"
               src="./imagenes/carrousel/outerWilds.jpg"
               alt="Portada del videojuego Outer Wilds"
@@ -117,7 +137,9 @@
           </div>
           <div>
             <img
+              tabindex="0"
               class="previewCard"
+              onkeydown="if (event.key === 'Enter' || event.key === ' ') cambiarFotoCarrousel(this)"
               onclick="cambiarFotoCarrousel(this)"
               src="./imagenes/carrousel/DiscoElysium.jpg"
               alt="Portada del videojuego Disco Elysium"
